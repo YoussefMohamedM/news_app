@@ -12,7 +12,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: IconButton(
         onPressed: () {},
-        icon: Icon(Icons.menu, color: AppColors.darkGrey),
+        icon: Icon(Icons.menu, color: AppColors.primaryBlack),
       ),
       title: Text("Home", style: AppStyles.medium20),
       actions: [

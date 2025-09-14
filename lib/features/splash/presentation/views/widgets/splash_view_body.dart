@@ -41,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
           turns: animation,
           child: Image.asset(
             AppAssets.splashImage,
-            color: AppColors.darkGrey,
+            color: AppColors.primaryBlack,
             height: MediaQuery.heightOf(context) * 0.19,
           ),
         ),

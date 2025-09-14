@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
       routerConfig: AppRouter.router,
       theme: ThemeData.light().copyWith(
         appBarTheme: AppBarTheme(
-          backgroundColor: AppColors.white,
+          backgroundColor: AppColors.primaryWhite,
           centerTitle: true,
-          actionsIconTheme: IconThemeData(color: AppColors.darkGrey),
+          actionsIconTheme: IconThemeData(color: AppColors.primaryBlack),
         ),
-        scaffoldBackgroundColor: AppColors.white,
+        scaffoldBackgroundColor: AppColors.primaryWhite,
       ),
     );
   }
