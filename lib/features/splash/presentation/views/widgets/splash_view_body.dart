@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:news_app/core/utils/app_assets.dart';
 import 'package:news_app/core/utils/app_colors.dart';
+import 'package:news_app/core/utils/app_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -18,6 +20,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initAnimation();
+    Future.delayed(Duration(seconds: 7), () {
+      GoRouter.of(context).push(AppRouter.homeRouteName);
+    });
   }
 
   @override

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/utils/app_colors.dart';
 import 'package:news_app/core/utils/app_router.dart';
 
 void main() {
@@ -13,6 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,
+      theme: ThemeData.light().copyWith(
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.white,
+          centerTitle: true,
+          actionsIconTheme: IconThemeData(color: AppColors.darkGrey),
+        ),
+        scaffoldBackgroundColor: AppColors.white,
+      ),
     );
   }
 }
