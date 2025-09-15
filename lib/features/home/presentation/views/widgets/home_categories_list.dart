@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constants.dart';
 import 'package:news_app/features/home/presentation/views/widgets/category_item.dart';
 
 import '../../../../../core/utils/app_assets.dart';
@@ -14,6 +13,7 @@ class HomeCategoriesList extends StatelessWidget {
     AppAssets.lightHealth,
     AppAssets.lightEntertainment,
   ];
+
   const HomeCategoriesList({super.key});
 
   @override
