@@ -11,7 +11,7 @@ class HomeTabBar extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: TabBar(
-        padding: EdgeInsets.only(left: 16, top: 16, bottom: 16),
+        padding: EdgeInsets.only(top: 16, bottom: 16),
         tabAlignment: TabAlignment.start,
         isScrollable: true,
         labelPadding: EdgeInsets.only(right: 16),
