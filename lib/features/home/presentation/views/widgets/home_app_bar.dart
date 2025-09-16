@@ -5,13 +5,16 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeAppBar({super.key});
+  final GlobalKey<ScaffoldState> scaffoldKey;
+  const HomeAppBar({super.key, required this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          scaffoldKey.currentState!.openDrawer();
+        },
         icon: Icon(Icons.menu, color: AppColors.primaryBlack),
       ),
       title: Text("Home", style: AppStyles.medium20),

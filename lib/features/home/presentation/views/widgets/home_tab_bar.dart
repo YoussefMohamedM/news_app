@@ -9,7 +9,6 @@ class HomeTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
       length: 5,
       child: TabBar(
         padding: EdgeInsets.only(left: 16, top: 16, bottom: 16),

@@ -25,4 +25,5 @@ class AppAssets {
   static const String languageIcon = "assets/images/icons/language.png";
   static const String searchIcon = "assets/images/icons/search.png";
   static const String themeIcon = "assets/images/icons/theme.png";
+  static const String polygonIcon = "assets/images/icons/Polygon.png";
 }
