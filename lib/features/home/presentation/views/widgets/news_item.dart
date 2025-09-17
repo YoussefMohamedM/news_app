@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/utils/app_colors.dart';
 import 'package:news_app/core/utils/app_styles.dart';
+import 'package:news_app/features/home/presentation/views/widgets/news_image.dart';
 
 class NewsItem extends StatelessWidget {
   const NewsItem({super.key});
@@ -16,13 +17,7 @@ class NewsItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.network(
-              width: double.infinity,
-              "https://www.fcbarcelona.com/photo-resources/2021/08/09/d4236e65-4502-4cca-816d-a97c441abdac/Camp-nou-1.jpg?width=1200&height=750",
-            ),
-          ),
+          NewsImage(),
           SizedBox(height: 10),
           Text(
             "40-year-old man falls 200 feet to his death while canyoneering at national park",
