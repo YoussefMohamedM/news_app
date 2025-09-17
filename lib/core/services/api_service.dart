@@ -9,7 +9,7 @@ class ApiService {
 
   Future<Response<Map<String, dynamic>>> get(String category) async {
     Response<Map<String, dynamic>> response = await _dio.get(
-      "${_baseUrl}everything?&q=$category$_apiKey",
+      "${_baseUrl}everything?q=$category&$_apiKey",
     );
     return response;
   }
