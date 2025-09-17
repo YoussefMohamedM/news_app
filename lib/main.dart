@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           actionsIconTheme: IconThemeData(color: AppColors.primaryBlack),
         ),
-        splashColor: Colors.red,
         scaffoldBackgroundColor: AppColors.primaryWhite,
       ),
     );

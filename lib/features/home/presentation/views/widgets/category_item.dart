@@ -16,7 +16,10 @@ class CategoryItem extends StatelessWidget {
           borderRadius: BorderRadiusGeometry.circular(24),
           child: Image.asset(image),
         ),
-        CategoryItemButton(index: index),
+        InkWell(
+          onTap: () {},
+          child: CategoryItemButton(index: index),
+        ),
       ],
     );
   }
