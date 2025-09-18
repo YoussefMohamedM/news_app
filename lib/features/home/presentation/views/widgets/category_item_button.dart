@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/features/home/data/models/category_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 
 class CategoryItemButton extends StatelessWidget {
-  final int index;
+  final Direction direction;
 
-  const CategoryItemButton({super.key, required this.index});
+  const CategoryItemButton({super.key, required this.direction});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: index % 2 == 0
+      margin: direction == Direction.r
           ? EdgeInsets.only(right: 16, bottom: 16)
           : EdgeInsets.only(left: 16, bottom: 16),
       decoration: BoxDecoration(
         color: AppColors.primaryWhite.withValues(alpha: 0.5),
         borderRadius: BorderRadius.circular(84),
       ),
-      child: index % 2 == 0
+      child: direction == Direction.r
           ? Row(
               mainAxisSize: MainAxisSize.min,
               children: [
