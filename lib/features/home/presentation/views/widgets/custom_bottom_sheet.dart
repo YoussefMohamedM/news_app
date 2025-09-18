@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/utils/app_colors.dart';
+import 'package:news_app/features/home/data/models/news_model/news_model.dart';
 import 'package:news_app/features/home/presentation/views/widgets/custom_button.dart';
 import 'package:news_app/features/home/presentation/views/widgets/news_image.dart';
 
 import '../../../../../core/utils/app_styles.dart';
 
 class CustomBottomSheet extends StatelessWidget {
-  const CustomBottomSheet({super.key});
+  final NewsModel newsModel;
+
+  const CustomBottomSheet({super.key, required this.newsModel});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +23,10 @@ class CustomBottomSheet extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          NewsImage(),
+          NewsImage(image: newsModel.urlToImage ?? ""),
           SizedBox(height: 8),
           Text(
-            "A 40-year-old man has fallen approximately 200 feet to his death while canyoneering with three others at Zion National Park in Utah, authorities confirmed.The incident occurred on Saturday when the… [+1529 chars]",
+            newsModel.description ?? "",
             style: AppStyles.medium14.copyWith(color: AppColors.primaryWhite),
           ),
           Spacer(),

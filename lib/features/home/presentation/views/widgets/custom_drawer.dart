@@ -28,11 +28,10 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () => GoRouter.of(context).pop(),
-                  child: DrawerOptions(
-                    icon: AppAssets.homeIcon,
-                    title: "Go To Home",
-                  ),
+                  onTap: () {
+                    GoRouter.of(context).pop();
+                  },
+                  child: DrawerOptions(icon: AppAssets.homeIcon, title: "Home"),
                 ),
                 CustomDivider(),
                 DrawerOptions(icon: AppAssets.themeIcon, title: "Theme"),

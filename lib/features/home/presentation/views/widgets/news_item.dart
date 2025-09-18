@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/utils/app_colors.dart';
 import 'package:news_app/core/utils/app_styles.dart';
+import 'package:news_app/features/home/data/models/news_model/news_model.dart';
 import 'package:news_app/features/home/presentation/views/widgets/news_image.dart';
 
 class NewsItem extends StatelessWidget {
-  const NewsItem({super.key});
+  final NewsModel newsModel;
+
+  const NewsItem({super.key, required this.newsModel});
 
   @override
   Widget build(BuildContext context) {
@@ -17,18 +20,18 @@ class NewsItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          NewsImage(),
+          NewsImage(image: newsModel.urlToImage ?? ""),
           SizedBox(height: 10),
-          Text(
-            "40-year-old man falls 200 feet to his death while canyoneering at national park",
-            style: AppStyles.bold16,
-          ),
+          Text(newsModel.title, style: AppStyles.bold16),
           SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("By : Jon Haworth", style: AppStyles.medium12),
-              Text("15 minutes ago", style: AppStyles.medium12),
+              Text(
+                "By : ${newsModel.author ?? "Unknown"}",
+                style: AppStyles.medium12,
+              ),
+              Text(newsModel.publishedAt ?? "", style: AppStyles.medium12),
             ],
           ),
         ],

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/utils/app_colors.dart';
 import 'package:news_app/core/utils/app_router.dart';
+import 'package:news_app/core/utils/service_locator.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(MyApp());
 }
 
